@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_stats_card"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="Database Icon"
+            android:src="@drawable/ic_database"
+            app:tint="@color/primary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uji Persistensi SQLite"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kebenaran Skema &amp; Integritas Data"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="14dp"
+        android:background="@color/divider_color" />
+
+    <!-- Info Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#F8FAFC"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/divider_color"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- Database Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Database:"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvDbName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                tools:text="taskmaster.db (v1)" />
+
+            <!-- Database File Path -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Path Penyimpanan Fisik SQLite:"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvDbPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#334155"
+                android:textSize="11sp"
+                android:typeface="monospace"
+                tools:text="/data/data/com.its.tugas4sqlite/databases/taskmaster.db" />
+
+            <!-- Database Size & Records -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ukuran File DB:"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvDbSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:text="16 KB" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jumlah Baris Data:"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvDbRows"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:text="5 Tugas" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Integrity Check Status -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Status PRAGMA integrity_check:"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvDbIntegrity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_medium"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:text="ok (Valid)"
+                android:textColor="@color/status_completed"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Persistence Explanation -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:lineSpacingExtra="2dp"
+        android:text="Uji Persistensi: Seluruh data pada aplikasi ini disimpan permanen dalam basis data SQLite internal Android. Meskipun aplikasi ditutup (force close), ditimpa di memori (memory kill), atau perangkat di-restart, seluruh perubahan data (Create, Update, Delete) tetap tersimpan dan utuh."
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecheckIntegrity"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cek Ulang"
+            app:icon="@drawable/ic_database" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClosePersistence"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/primary"
+            android:text="@string/close"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

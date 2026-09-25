@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_persistence"
+        android:icon="@drawable/ic_database"
+        android:title="@string/persistence_test"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort"
+        android:title="Urutkan"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/sort_newest"
+                android:title="Terbaru (Default)" />
+            <item
+                android:id="@+id/sort_deadline"
+                android:title="Deadline Terdekat" />
+            <item
+                android:id="@+id/sort_priority"
+                android:title="Prioritas Tertinggi" />
+            <item
+                android:id="@+id/sort_budget"
+                android:title="Anggaran Terbesar" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_generate_samples"
+        android:title="@string/generate_samples"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_delete_all"
+        android:title="@string/delete_all"
+        app:showAsAction="never" />
+
+</menu>

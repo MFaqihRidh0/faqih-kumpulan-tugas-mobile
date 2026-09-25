@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TaskMaster</string>
+    <string name="app_subtitle">SQLite CRUD &amp; Data Persistence</string>
+    
+    <!-- Actions & Labels -->
+    <string name="search_hint">Cari tugas atau kategori...</string>
+    <string name="add_task">Tambah Tugas Baru</string>
+    <string name="edit_task">Edit Tugas</string>
+    <string name="detail_task">Detail Tugas</string>
+    <string name="delete_task">Hapus Tugas</string>
+    <string name="delete_all">Hapus Semua Data</string>
+    <string name="persistence_test">Uji Persistensi SQLite</string>
+    <string name="generate_samples">Muat Data Sampel</string>
+    <string name="save">Simpan</string>
+    <string name="cancel">Batal</string>
+    <string name="delete">Hapus</string>
+    <string name="close">Tutup</string>
+    
+    <!-- Form Fields -->
+    <string name="title_label">Judul Tugas *</string>
+    <string name="title_hint">Contoh: Laporan Akhir Praktikum Pemrograman Mobile</string>
+    <string name="desc_label">Deskripsi</string>
+    <string name="desc_hint">Keterangan atau rincian pengerjaan tugas...</string>
+    <string name="category_label">Kategori *</string>
+    <string name="priority_label">Prioritas *</string>
+    <string name="due_date_label">Tenggat Waktu (Deadline) *</string>
+    <string name="due_date_hint">Pilih Tanggal</string>
+    <string name="budget_label">Estimasi Anggaran / Biaya (Rp)</string>
+    <string name="budget_hint">Contoh: 50000</string>
+    
+    <!-- Filter Chips -->
+    <string name="filter_all">Semua</string>
+    <string name="filter_pending">Belum Selesai</string>
+    <string name="filter_completed">Selesai</string>
+    <string name="filter_high_priority">Prioritas Tinggi</string>
+    
+    <!-- Empty State -->
+    <string name="empty_title">Belum Ada Tugas</string>
+    <string name="empty_desc">Tekan tombol (+) di bawah atau menu opsi untuk memuat data sampel.</string>
+    <string name="search_empty_title">Tugas Tidak Ditemukan</string>
+    <string name="search_empty_desc">Tidak ada tugas yang sesuai dengan kata kunci atau filter.</string>
+</resources>
